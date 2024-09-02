@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Demo</title>
+    <link rel="stylesheet" href="request.css">
+    <link rel="stylesheet" href="nav&footer.css">
+    <script src="script.js"></script>
+  
+</head>
+
+<body>
+    <div class="master-container">
+        <section class="home-header-container">
+            <nav>
+
+                <input class="toggle-btn" type="checkbox" id="toggle-btn" hidden>
+
+
+                <div class="logo-section">
+
+                    <div class="logo">
+                        <a href="https://www.technixindia.com/">
+                            <!---     <img src="images/logo/logo-black-182x75.png" alt="Logo Technix India">  --->
+                            <img src="image/logo-black-157x65.png" alt="Logo Technix India">
+                        </a>
+                    </div>
+
+                    <div class="hamburger-menu">
+                        <label class="menu-icon" for="toggle-btn"><span class="hamburger"></span></label>
+                    </div>
+                </div>
+
+
+
+                <div class="navigation-menu">
+
+                    <ul>
+                        <li class="active"><a href="index.html" class="nav-link"><span>Home</span></a></li>
+                        <li><a href="company-profile.html" class="nav-link"><span>Company</span></a></li>
+                        <li><a href="services.html" class="nav-link"><span>Services</span></a></li>
+                        <li><a href="products.html" class="nav-link"><span>Products</span></a></li>
+                        <li><a href="career.php" class="nav-link"><span>Career</span></a></li>
+                        <li><a href="partner.html" class="nav-link"><span>Partner</span></a></li>
+                        <li><a href="contact.php" class="nav-link"><span>Contact</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <div class="container">
+            <div class="banner">
+                <div class="form">
+                    <h1>Request Demo</h1>
+
+                    <p>we'll need these details in order to be able to contact</p>
+                </div>
+
+                <div class="form">
+                    <label for="name" class="form-label">FULL NAME</label>
+                    <input type="text" id="name" class="form-control" style="border-bottom: 2px solid rgb(204, 204, 204);">
+                    <small id="name-error" class="input-error error-msg" style="display: inline;">Enter A Valid
+                        Name</small>
+                </div>
+                <div class="form">
+                    <label for="Mobile no." class="form-label">MOBILE-NUMBER</label>
+                    <input type="text" id="mobile" class="form-control" style="border-bottom: 2px solid rgb(204, 204, 204);">
+                    <small id="mobile-error" class="input-error error-msg" style="display: inline;">Enter 10 digit
+                        Mobile no</small>
+
+                </div>
+                <div class="form">
+                    <label for="Email" class="form-label">Email</label>
+                    <input type="text" id="email" class="form-control" style="border-bottom: 2px solid rgb(204, 204, 204);">
+                    <small id="email-error" class="input-error" style="display: inline;">valid Email</small>
+                </div>
+                <div class="form">
+                    <label for="city" class="form-label">CITY</label>
+                    <input type="text" id="city" class="form-control" style="border-bottom: 2px solid rgb(204, 204, 204);">
+                    <small id="city-error" class="input-error" style="display: inline;">city name</small>
+
+                </div>
+
+                <div class="form">
+                    <label for="country" class="form-label">COUNTRY</label>
+                    <input type="text" id="country" class="form-control" style="border-bottom: 2px solid rgb(204, 204, 204);">
+                    <small id="country-error" class="input-error" style="display: inline;">country name</small>
+                </div>
+
+                <DIV class="form">
+
+                    <label for="message" class="form-label">Brief Your Requirements</label>
+                    <textarea class="text-form-control" id="message" name="message" rows="3" cols="50"
+                        tabindex="13"></textarea>
+                    <small id="message-error" class="input-error"></small>
+                </DIV>
+                <div class="form">
+                    <h1>submit Request</h1>
+
+                    <p>In order to contact you, we need to save your personal data.If you are happy for us to do so
+                        please click the checkbox below.
+
+                        You can read our privacy policy for more information.</p>
+                </div>
+
+                <div class="checkbox-allow-updates" id="checkbox-allow-updates">
+                    <label for="allow-updates">
+                        <input type="checkbox" name="allow-updates" id="allow-updates" checked="" value="Yes"
+                            class="allow_updates" tabindex="14">
+                        <span>Allow us to process your personal information.</span>
+                    </label>
+                </div>
+
+
+
+
+
+
+                <div class="form-2">
+                    <label for="captcha-code" class="form-label">Captcha</label>
+                    <form id="captchaForm" onsubmit="return validateCaptcha()">
+                        <div class="captcha-box">
+
+                            <span class="question" id="captchaQuestion"></span>
+                            <input type="text" class="form-control-captcha" id="captchaAnswer" name="captcha-code"
+                                tabindex="15">
+                        </div>
+
+                        <button class="refresh" type="button" onclick="generateCaptcha()">Refresh</button>
+                        <div class="button-area">
+                        </div>
+                           
+                        </div>
+                        <input type="submit" id="submit" name="submit" class="submit-btn" value="Submit Request"
+                        tabindex="16">
+                        <p class="message" id="message"></p>
+                    </form>
+                    
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+                 <!--footer-->
+
+        <section class="footer-main">
+
+
+            <div class="column-overview">
+                <div class="row-paragraph">
+                    <h4 class="footer-h4">We Are Reimagining<br>The Relationship<br>Between</h4>
+                    <p class="footer-paragraph">People & Technology</p>
+                </div>
+
+                <div class="iso">
+                    <img src="image/iso-msme.png" alt="ISO MSME Certified">
+                </div>
+            </div>
+
+            <div class="column-contact">
+                <div>
+
+                    <div>
+                        <ul class="ul-contact-details">
+                            <li class="footer-li">
+                                <a><img src="image/mobile-icon.png" alt="Technix Mobile Number"
+                                        class="footer-contact-icons">+91-938-601-3146</a>
+                            </li>
+                            <li class="footer-li">
+                                <a><img src="image/skype-icon.png" alt="Skype Contact"
+                                        class="footer-contact-icons">technix-india</a>
+                            </li>
+                            <li class="footer-li">
+                                <a><img src="image/email-icon.png" alt="Technix Email" class="footer-contact-icons"><img
+                                        src="image/email-id-technix.png" alt="Technix Email"></a>
+                            </li>
+
+                            <li class="footer-li">
+                                <a class="location"><img src="image/location-icon.png" alt="Technix Email"
+                                        class="footer-contact-icons">Bangalore </a>
+                                <a href="/patna/">Patna</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="columns-newsletter">
+                <h4 class="footer-h4">Newsletter</h4>
+                <p>By subscribing to our mailing list you will always be updated with the latest news from us.</p>
+
+                <div class="subscribe-part2">
+                    <div class="subscribe-form">
+                        <form id="form-subscribe" action="" method="post">
+                            <div class="subscribe-box">
+                                <input type="email" class="text-email" id="subscription-email" name="subscription-email"
+                                    placeholder="Enter Your Email">
+                                <input class="btn-subscribe" id="btn-subscribe" name="btn-subscribe" type="button"
+                                    value="Subscribe">
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <div class="response-text">
+                        <p id="response-subscribe" class="error-msg" style="display: none;">Enter a valid email address
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+
+            <div class="social-container">
+
+
+
+                <div class="footer-social">
+
+                    <div>
+                        <a href="https://www.facebook.com/technixindia" target="_blank" class="facebook-scl"></a>
+                    </div>
+
+                    <div>
+                        <a href="https://twitter.com/technixindia" target="_blank" class="twitter-scl"></a>
+                    </div>
+
+                    <div>
+                        <a href="https://www.youtube.com/technixindia" target="_blank" class="youtube-scl"></a>
+                    </div>
+
+                    <div>
+                        <a href="https://www.linkedin.com/company/technixindia" target="_blank"
+                            class="linkedin-scl"></a>
+                    </div>
+
+                    <div>
+                        <a href="https://www.instagram.com/technixindia" target="_blank" class="instagram-scl"></a>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="footer-bottom">
+            <div class="footer-bottom-left"><a href="privacy-policy.html">Privacy Policy</a></div>
+            <div class="footer-bottom-right"><a href="terms-conditions.html">Terms & Conditions</a></div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
